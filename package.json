@@ -1,0 +1,16 @@
+{
+  "name": "data-visualization-guide",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Data visualization guide presentation.",
+  "main": "index.js",
+  "scripts": {
+    "main": "node index.js"
+  },
+  "author": "Gabriel Menezes",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "reveal.js": "^4.1.3"
+  }
+}
