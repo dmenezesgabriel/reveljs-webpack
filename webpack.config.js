@@ -16,7 +16,7 @@ module.exports = {
         watch: true,
       },
       {
-        directory: path.join(__dirname, "node_modules"),
+        directory: path.resolve(__dirname, "node_modules"),
         publicPath: "/",
       },
     ],
