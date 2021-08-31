@@ -2,18 +2,31 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  target: "web",
   mode: "development",
   entry: {
     index: "./src/index.js",
   },
   devtool: "inline-source-map",
   devServer: {
-    static: "./dist",
+    static: [
+      {
+        directory: path.join(__dirname, "public"),
+        publicPath: "/",
+        watch: true,
+      },
+      {
+        directory: path.join(__dirname, "node_modules"),
+        publicPath: "/",
+      },
+    ],
+    compress: true,
+    port: 9000,
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: "Development",
-      template: "index.html",
+      template: path.join(__dirname, "public", "index.html"),
     }),
   ],
   output: {
