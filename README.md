@@ -1,4 +1,4 @@
-# Data Visualization Guide
+# Reveljs Webpack
 
 ## Dependencies
 
